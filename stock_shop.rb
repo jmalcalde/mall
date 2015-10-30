@@ -1,20 +1,18 @@
-class Shop < Item
+class Stock_Shop < Item
 
-	def initialize(name, price, stock)
+	attr_accessor :stock, :minimum_stock
+
+	def initialize(name, price, stock, minimum_stock)
+
 		super(name, price)
 		@stock = stock
+		@minimun_stock = minimum_stock
 
 	end
 
-	def add_item
+	def minimun_stock
 
-	end
-
-	def show_items
-
-	end
-
-	def decrease_stock(name)
+		@minimun_stock
 
 	end
 

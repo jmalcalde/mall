@@ -8,9 +8,13 @@ class ShoppingCart
 
 	end
 
-	def add_item(item)
+	def add_item(item, shop)
 
 		@items << item
+
+		shop.decrease_stock(item.name)
+
+		shop.perform_input(item.name)
 
 	end
 
@@ -21,11 +25,11 @@ class ShoppingCart
 		@items.each do | item |
 
 			total += item.price
-			# binding.pry
 
 		end
 
 		puts @items.size > 1? total * 0.95 : total
+
 
 	end
 

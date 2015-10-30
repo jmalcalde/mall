@@ -1,5 +1,3 @@
-require 'pry'
-
 class Fruits < Item
 
 	def initialize(name, price)
