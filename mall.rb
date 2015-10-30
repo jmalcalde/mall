@@ -12,4 +12,14 @@ class Mall
 
 	end
 
+	def show_shops
+
+		@shops.each do | shop |
+
+			puts shop.name
+			shop.show_stock
+		end
+
+	end
+
 end

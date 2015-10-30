@@ -1,11 +1,12 @@
 class Shop
 
-	attr_accessor :stocks, :money
+	attr_accessor :stocks, :money, :name
 
-	def initialize
+	def initialize(name)
 
 		@stocks = []
 		@money = 0
+		@name = name
 
 	end
 
@@ -58,7 +59,7 @@ class Shop
 				if value_product > 0
 
 					@money -= value_product
-					
+
 					stock.stock += 1
 
 				end

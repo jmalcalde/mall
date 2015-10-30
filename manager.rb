@@ -21,9 +21,9 @@ warehouse = Warehouse.new
 
 # Shops
 
-shop1 = Shop.new
-shop2 = Shop.new
-shop3 = Shop.new
+shop1 = Shop.new("Your fruit shop")
+shop2 = Shop.new("Your things")
+shop3 = Shop.new("Shop for life")
 
 mall.add_shop(shop1)
 mall.add_shop(shop2)
@@ -61,11 +61,6 @@ shop3.add_stock(stock3)
 shop3.add_stock(stock4)
 shop3.add_stock(stock5)
 
-# add Shops
-
-mall.add_shop(shop1)
-mall.add_shop(shop2)
-mall.add_shop(shop3)
 
 # add Shopping Cart
 
@@ -100,8 +95,9 @@ johs_cart.add_item(vacuum, shop1)
 johs_cart.checkout
 
 shop1.check_stock(warehouse)
-shop1.show_stock
-warehouse.show_warehouse
+# shop1.show_stock
+# warehouse.show_warehouse
+mall.show_shops
 
 
 
